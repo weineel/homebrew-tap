@@ -1,25 +1,25 @@
 class Zootree < Formula
   desc "A multi-repo workspace management tool with worktree and terminal multiplexer integration"
   homepage "https://github.com/weineel/zootree"
-  version "0.0.10"
+  version "0.1.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/weineel/zootree/releases/download/v0.0.10/zootree-aarch64-apple-darwin.tar.xz"
-      sha256 "5a5f81a8bd777b1a29fa123bc88a98726f2fdc3128d1dff84d6f5d97dfa7b55f"
+      url "https://github.com/weineel/zootree/releases/download/v0.1.0/zootree-aarch64-apple-darwin.tar.xz"
+      sha256 "43ea2cd2e00fe1be3f5f13122b3d6463da6aa2bee596913887d775ad11cdfc0a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/weineel/zootree/releases/download/v0.0.10/zootree-x86_64-apple-darwin.tar.xz"
-      sha256 "ef16d0ee241f59826d5e453c2129b0807ee3d08ba16b601ef87cf10d36aa2421"
+      url "https://github.com/weineel/zootree/releases/download/v0.1.0/zootree-x86_64-apple-darwin.tar.xz"
+      sha256 "71f260be02546643fccd520368c11e45ef3d2707ba3fb4f0b94bd324399c7e7a"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/weineel/zootree/releases/download/v0.0.10/zootree-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "a4e89d14e528e00ac41172f81be038d82ca1ec3977e16be29f7b6b7c1e5b6284"
+      url "https://github.com/weineel/zootree/releases/download/v0.1.0/zootree-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "2febe34f116506e87d7690478e3b181b21808a953d5cd7885fd673d3fe3082ba"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/weineel/zootree/releases/download/v0.0.10/zootree-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "dce1528b6689dcba6a6eccf1917dd24fe36f207c8c949070f5b2ca0ca42a59ad"
+      url "https://github.com/weineel/zootree/releases/download/v0.1.0/zootree-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "c4145fa25818f7d04ff8c7be2294b12e7e6ac075711e5630360036f01480b8a5"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class Zootree < Formula
   end
 
   def install
-    bin.install "zootree" if OS.mac? && Hardware::CPU.arm?
-    bin.install "zootree" if OS.mac? && Hardware::CPU.intel?
-    bin.install "zootree" if OS.linux? && Hardware::CPU.arm?
-    bin.install "zootree" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "zootree"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "zootree"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "zootree"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "zootree"
+    end
 
     install_binary_aliases!
 
