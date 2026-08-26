@@ -1,25 +1,25 @@
 class Zootree < Formula
   desc "A multi-repo workspace management tool with worktree and terminal multiplexer integration"
   homepage "https://github.com/weineel/zootree"
-  version "0.1.1"
+  version "0.1.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/weineel/zootree/releases/download/v0.1.1/zootree-aarch64-apple-darwin.tar.xz"
-      sha256 "2d7dfb6709f5054b4fc6cd40572c3e06a22046675143cc0533cdf4c3f5dd1e0e"
+      url "https://github.com/weineel/zootree/releases/download/v0.1.2/zootree-aarch64-apple-darwin.tar.xz"
+      sha256 "7926ba647a1389afb680c5eaae6c5e58a18cd2335bbd7c6286113313de5eaae3"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/weineel/zootree/releases/download/v0.1.1/zootree-x86_64-apple-darwin.tar.xz"
-      sha256 "57383c8995505bf24e55770464d77dec3ae35edc082e1c8822d78e38ee77d8fc"
+      url "https://github.com/weineel/zootree/releases/download/v0.1.2/zootree-x86_64-apple-darwin.tar.xz"
+      sha256 "90f32849aad41763643e9b92aba170e0c8daf30eca6eb6e2e7b8d03de5afa897"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/weineel/zootree/releases/download/v0.1.1/zootree-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "9b0fd80d3f8c5cc6537b637dc5ba4854d2dce179c3fb353a13b87910b8949703"
+      url "https://github.com/weineel/zootree/releases/download/v0.1.2/zootree-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "25b569f1fdf183ec50f173b14cb8ad8dce3155e8c8e2b3103c7fe1e31d096810"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/weineel/zootree/releases/download/v0.1.1/zootree-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "81683f635738825dd126f25a339567be833fcee3526fdec830e33552608acf33"
+      url "https://github.com/weineel/zootree/releases/download/v0.1.2/zootree-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "026509492f41f22c6bc46f25aeaecf56365266fbba9553d0d753926ae71fa2e5"
     end
   end
   license "MIT"
